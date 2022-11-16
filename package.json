@@ -1,6 +1,6 @@
 {
   "name": "@statewalker/cache-mem",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "In memory LRU cache",
   "keywords": [],
   "homepage": "https://github.com/statewalker/statewalker-cache-mem",
