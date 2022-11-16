@@ -1,0 +1,48 @@
+{
+  "name": "@statewalker/cache-mem",
+  "version": "0.1.0",
+  "description": "In memory LRU cache",
+  "keywords": [],
+  "homepage": "https://github.com/statewalker/statewalker-cache-mem",
+  "author": {
+    "name": "Mikhail Kotelnikov",
+    "email": "mikhail.kotelnikov@gmail.com"
+  },
+  "type": "module",
+  "files": [
+    "dist/**/package.json",
+    "dist/**/*.js",
+    "src/**/*.js",
+    "index.js"
+  ],
+  "devDependencies": {
+    "@statewalker/rollup": "^0.1.5",
+    "eslint": "^8",
+    "expect.js": "^0.3",
+    "mocha": "^10",
+    "rollup": "^2"
+  },
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "jsdelivr": "dist/index-umd.min.js",
+  "unpkg": "dist/index-umd.min.js",
+  "exports": {
+    "umd": "./dist/index-umd.min.js",
+    "default": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:statewalker/statewalker-cache-mem.git"
+  },
+  "scripts": {
+    "eslint": "eslint src",
+    "rollup": "rollup -c",
+    "test": "mocha -R spec ./test/index.js",
+    "prepublishOnly": "rm -rf dist && yarn test && yarn rollup"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
