@@ -29,7 +29,6 @@ export function bindLruMethods(cache, { max = 100, maxAge = 1000 * 60 * 60, disp
 
    refresh : function (key) {
      const slot = this.index[key];
-     let now;
      if (slot) {
        slot.stamp = this._now();
        this.list.sort(this._compareSlots);
